@@ -8,14 +8,13 @@ html {
   block-size: 100%;
 }
 
-.page {
-  inline-size: 1200px;
-  block-size: 100%;
-  margin: auto;
-  color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  background-color: #1b1919;
+video {
+  width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip-path: inset(50%);
 }
 
 h1,
@@ -36,6 +35,218 @@ ul,
 ol {
   list-style: none;
 }
+
+.page {
+  inline-size: 1200px;
+  block-size: 100%;
+  margin: auto;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  background-color: #1b1919;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  gap: 30px;
+  margin: 0 30px;
+  inline-size: 100%;
+}
+
+.result {
+  position: relative;
+  inset: 75px 0 0 0;
+  align-items: flex-end;
+}
+
+.result__video-container {
+  position: relative;
+  margin: 0 0 11px;
+  inline-size: 711px;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+  inline-size: 100%;
+  color: #FFF;
+}
+
+.search-form__fieldset-title {
+  font-weight: 400;
+  font-size: 18px;
+}
+.search-form__label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-form__label:hover {
+  text-decoration: underline;
+
+}
+
+.search-form__textfield {
+  padding: 2px 0;
+  border-left: none;
+  border-right: none;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.7)
+}
+
+.title {
+  font-family: "Oswald", sans-serif;
+  padding: 0 0 26px;
+  color: #fff;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 75px;
+}
+
+.button {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  width: 194px;
+  border: 1px solid #fff;
+  padding: 6px 0;
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
+  inline-size: 100%;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus-visible {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+.search-form__textfield {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  background-color: transparent;
+  font-size: 18px;
+  opacity: 1;
+  font-weight: 400;
+  color: #FFF;
+  outline: #FFF 1px;
+  width: 225px;
+}
+
+.search-form__label input:focus-visible {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+.search-form__label:focus-visible {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  display: block;
+  border: #FFF solid 1px;
+  inline-size: 19px;
+  block-size: 19px;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  display: block;
+  background-color: #FFF;
+  inline-size: 15px;
+  block-size: 15px;
+  margin-top: 1px;
+  margin-left: 1px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__list {
+  overflow-y: scroll;
+  block-size: 298px;
+  scrollbar-width: none;
+}
+
+.content__video-card-description-container {
+  color: #FFF;
+  margin: -6px 0 0 3px;
+}
+
+.content__card-link {
+  text-decoration: none;
+}
+
+.content__list-item:active {
+  background-color: #545050;
+}
+
+.content__list-item:hover {
+  text-decoration: underline 1.5px;
+  text-underline-offset: 3px;
+}
+
+.content__list-item:focus-visible {
+  outline: 1px solid #FFF;
+}
+
+.content__video-card-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 196px;
+  overflow-x: hidden;
+}
+
+.content__video-card-description {
+  font-family: "Fira Sans Condensed", sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+}
+
+.content__video-card {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__video-card-thumbnail {
+  inline-size: 194px;
+}
+
 
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
