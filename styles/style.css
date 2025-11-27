@@ -65,6 +65,7 @@ ol {
   position: relative;
   margin: 0 0 11px;
   inline-size: 711px;
+
 }
 
 .search-form {
@@ -161,7 +162,7 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__label:focus-visible {
+.search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
   outline: 1px solid #FFF;
   outline-offset: 1px;
 }
@@ -192,10 +193,10 @@ ol {
   color: #545050;
 }
 
-.content__list {
-  overflow-y: scroll;
+.content__list-container {
+  overflow-y: auto;
   block-size: 298px;
-  scrollbar-width: none;
+  overflow-x: visible;
 }
 
 .content__video-card-description-container {
@@ -225,8 +226,9 @@ ol {
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
-  width: 196px;
+  inline-size: 180px;
   overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 .content__video-card-description {
@@ -245,12 +247,20 @@ ol {
 
 .content__video-card-thumbnail {
   inline-size: 194px;
+  margin-right: 3px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.more-button {
+  width: 378px;
 }
 
 
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
+  padding-left: 3px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
